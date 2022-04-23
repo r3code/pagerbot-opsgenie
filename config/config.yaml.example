@@ -3,6 +3,9 @@ api_keys:
   pagerduty:
     org: "$PAGERDUTY_ORG"
     key: "$PAGERDUTY_KEY"
+  opsgenie:
+    org: "$OPSGENIE_ORG"
+    key: "$OPSGENIE_KEY"
 
 groups:
   - name: oncall
