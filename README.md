@@ -1,19 +1,18 @@
 # PagerBot
 
-A fork of https://github.com/goodeggs/pagerbot, which is a fork of
-https://github.com/YoSmudge/pagerbot.
+A fork of https://github.com/austinorth/pagerbot.
 
-Update your Slack user groups based on your PagerDuty Schedules.
+Update your Slack user groups based on your OpsGenie Schedules.
 
-PagerBot is a simple program to do this. Provided with your PagerDuty
+PagerBot is a simple program to do this. Provided with your OpsGenie
 and Slack API credentials, and some simple configuration, it will update
 the usergroups automatically, as well as posting a message to channels
 you select informing everyone who's currently on the rotation.
 
-PagerBot matches PagerDuty users to Slack users by their email
+PagerBot matches OpsGenie users to Slack users by their email
 addresses, so your users must have the same email address in Slack as in
-PagerDuty. PagerBot will log warnings for any users it finds in
-PagerDuty but not in Slack.
+OpsGenie. PagerBot will log warnings for any users it finds in
+OpsGenie but not in Slack.
 
 # Installation
 
@@ -26,7 +25,7 @@ A basic configuration file will look like
 ```yaml
 api_keys:
   slack: "abcd123"
-  pagerduty:
+  opsgenie:
     org: "songkick"
     key: "qwerty567"
 
@@ -49,8 +48,8 @@ groups:
 ```
 
 The configuration should be fairly straightforward, under API keys
-provide your Slack and Pagerduty keys. Under groups configure the Slack
-groups you'd like to update. `schedules` is a list of PagerDuty schedule
+provide your Slack and OpsGenie keys. Under groups configure the Slack
+groups you'd like to update. `schedules` is a list of OpsGenie schedule
 IDs, `update_message` is the message you'd like to post, and the channels
 you'd like to post them in.
 
