@@ -8,12 +8,12 @@ import (
 
 // Validate the configuration file for sanity
 func (c *config) Validate() error {
-	if c.ApiKeys.Slack == "" || c.ApiKeys.Pagerduty.Key == "" {
-		return fmt.Errorf("You must provide API keys for Slack and Pagerduty")
+	if c.ApiKeys.Slack == "" || c.ApiKeys.OpsGenie.Key == "" {
+		return fmt.Errorf("You must provide API keys for Slack and OpsGenie")
 	}
 
-	if c.ApiKeys.Pagerduty.Org == "" {
-		return fmt.Errorf("You must provide an org name for Pagerduty (<org>.pagerduty.com)")
+	if c.ApiKeys.OpsGenie.Org == "" {
+		return fmt.Errorf("You must provide an org name for OpsGenie (<org>.opsgenie.com)")
 	}
 
 	if len(c.Groups) == 0 {
