@@ -7,6 +7,10 @@ type config struct {
 			Key string
 			Org string
 		}
+		OpsGenie struct { 
+			Key string
+			Org string
+		}
 	} `yaml:"api_keys"`
 	Groups []struct {
 		Name          string
